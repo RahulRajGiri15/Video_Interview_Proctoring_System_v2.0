@@ -1,0 +1,145 @@
+.panel {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h3 {
+  font-size: 1.25rem;
+}
+
+.integrityScore {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.scoreValue {
+  color: #4CAF50;
+}
+
+.section {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.section h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.metric span:first-child {
+  opacity: 0.8;
+}
+
+.good {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.warning {
+  color: #FF9800;
+  font-weight: bold;
+}
+
+.bad {
+  color: #F44336;
+  font-weight: bold;
+}
+
+.objectList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detectedObject {
+  background: rgba(244, 67, 54, 0.8);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.objectName {
+  font-weight: bold;
+}
+
+.confidence {
+  opacity: 0.9;
+}
+
+.noObjects, .noEvents {
+  opacity: 0.6;
+  font-style: italic;
+  text-align: center;
+  padding: 1rem;
+}
+
+.eventLog {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.event {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 0.75rem;
+}
+
+.eventIndicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.eventContent {
+  flex-grow: 1;
+}
+
+.eventMessage {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.eventTime {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}

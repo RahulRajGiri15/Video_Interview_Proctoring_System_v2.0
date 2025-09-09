@@ -1,0 +1,110 @@
+.cameraContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 4:3 Aspect Ratio */
+}
+
+.video, .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(-1); /* Mirror the video */
+}
+
+.overlay {
+  z-index: 10;
+  pointer-events: none;
+}
+
+.statusOverlay {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.statusBadge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statusBadge.focused {
+  background-color: #4CAF50;
+  color: white;
+}
+.statusBadge.focus-lost {
+  background-color: #FF9800;
+  color: white;
+}
+.statusBadge.no-face, .statusBadge.multiple-faces {
+  background-color: #F44336;
+  color: white;
+}
+
+.objectAlert {
+  background: rgba(244, 67, 54, 0.8);
+  color: white;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.objectTag {
+  background: white;
+  color: #F44336;
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.controls {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat .value {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
