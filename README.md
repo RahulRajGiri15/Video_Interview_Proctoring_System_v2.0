@@ -1,11 +1,9 @@
-# [Video Interview Proctoring System](https://videoproctoringsystem.vercel.app/)
+# [Video Interview Proctoring System](https://videoproctoringsystemv2.vercel.app/)
 
+**Live Link :** [https://videoproctoringsystemv2.vercel.app/](https://videoproctoringsystemv2.vercel.app/)
 
-**Live Link :** [https://videoproctoringsystem.vercel.app/](https://videoproctoringsystem.vercel.app/)
-
-
-**Frontend :** [https://videoproctoringsystem.vercel.app/](https://videoproctoringsystem.vercel.app/)  
-**Backend API :** [https://videoproctoringbackend.onrender.com](https://videoproctoringbackend.onrender.com)
+**Frontend :** [https://videoproctoringsystemv2.vercel.app/](https://videoproctoringsystemv2.vercel.app/)  
+**Backend API :** [https://video-interview-proctoring-system-v2-0.onrender.com](https://video-interview-proctoring-system-v2-0.onrender.com)
 
 ---
 
@@ -32,10 +30,10 @@ This project demonstrates the integration of **modern web technologies** and **r
 
 * **Real-time Focus Detection:** Monitors candidate attention using face and eye tracking.
 * **Face Detection:** Identifies presence/absence of faces and flags multiple faces in the frame.
-* **Object Detection:** Detects unauthorized items such as phones, books, or electronic devices using TensorFlow\.js.
+* **Object Detection:** Detects unauthorized items such as phones, books, or electronic devices using TensorFlow.js.
 * **Integrity Scoring:** Computes a final score based on logged suspicious events.
 * **Detailed Reports:** Generates session summaries including all events and the overall integrity score.
-* **Tech Stack:** MERN (MongoDB, Express, React, Node.js), TensorFlow\.js, MediaPipe, React Webcam
+* **Tech Stack:** MERN (MongoDB, Express, React, Node.js), TensorFlow.js, MediaPipe, React Webcam
 
 ---
 
@@ -52,7 +50,7 @@ This project demonstrates the integration of **modern web technologies** and **r
 
 ### 1. Clone the Repository
 
-```
+```bash
 git clone https://github.com/your-username/video-proctoring-system.git
 cd video-proctoring-system
 ```
@@ -61,14 +59,14 @@ cd video-proctoring-system
 
 **Backend:**
 
-```
+```bash
 cd backend
 npm install
 ```
 
 **Frontend:**
 
-```
+```bash
 cd frontend
 npm install
 ```
@@ -77,7 +75,7 @@ npm install
 
 Create a `.env` file in the backend directory and add your MongoDB connection URI:
 
-```
+```env
 MONGODB_URI=your-mongodb-connection-string
 ```
 
@@ -85,13 +83,13 @@ MONGODB_URI=your-mongodb-connection-string
 
 **Backend:**
 
-```
+```bash
 npm run dev
 ```
 
 **Frontend:**
 
-```
+```bash
 cd frontend
 npm run dev
 ```
@@ -109,7 +107,7 @@ The application can be deployed on platforms such as **Vercel** (frontend) and *
 * Push your frontend code to GitHub.
 * Create a new project on Vercel and link the repository.
 * Set environment variables if required.
-* Deploy to get a public URL: [https://videoproctoringsystem.vercel.app/](https://videoproctoringsystem.vercel.app/)
+* Deploy to get a public URL: [https://videoproctoringsystemv2.vercel.app/](https://videoproctoringsystemv2.vercel.app/)
 
 **Backend Deployment (Render):**
 
@@ -117,18 +115,18 @@ The application can be deployed on platforms such as **Vercel** (frontend) and *
 * Create a Web Service on Render and connect the repository.
 * Set build command:
 
-```
+```bash
 npm install
 ```
 
 * Set start command:
 
-```
+```bash
 npm start
 ```
 
 * Add environment variable `MONGODB_URI`.
-* Deploy to get a public URL: [https://videoproctoringbackend.onrender.com](https://videoproctoringbackend.onrender.com)
+* Deploy to get a public URL: [https://video-interview-proctoring-system-v2-0.onrender.com](https://video-interview-proctoring-system-v2-0.onrender.com)
 
 ---
 
@@ -137,9 +135,9 @@ npm start
 | Method | Endpoint                  | Description           |
 | ------ | ------------------------- | --------------------- |
 | POST   | /api/sessions             | Create a new session  |
-| POST   | /api/sessions/\:id/events | Log a detection event |
-| PUT    | /api/sessions/\:id/end    | End a session         |
-| GET    | /api/sessions/\:id        | Retrieve final report |
+| POST   | /api/sessions/:id/events  | Log a detection event |
+| PUT    | /api/sessions/:id/end     | End a session         |
+| GET    | /api/sessions/:id         | Retrieve final report |
 
 ---
 
